@@ -118,7 +118,7 @@ function (_Component) {
 
           var newBounds = new google.maps.LatLngBounds(boundingBox.southWest, boundingBox.northEast);
 
-          if (!oldBounds || !oldBounds.Ua || !oldBounds.La || oldBounds.Ua.g !== newBounds.Ua.g || oldBounds.Ua.i !== newBounds.Ua.i || oldBounds.La.g !== newBounds.La.g || oldBounds.La.i !== newBounds.La.i) {
+          if (!newBounds.equals(oldBounds)) {
             _this2.instance.fitBounds(newBounds, boundingBoxPadding);
           }
         });
